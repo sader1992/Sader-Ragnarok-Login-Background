@@ -9,7 +9,7 @@ namespace Sader_Ragnarok_Login_Background
         static void Main(string[] args)
         {
             string file = args[0];
-            //string file = @"C:\Users\sader\Visual Studio\sader login background\bin\Debug\tewst2.png";
+
             if (Path.GetExtension(file) != ".jpg" && Path.GetExtension(file) != ".bmp" && Path.GetExtension(file) != ".png")
             {
                 Console.WriteLine("the image extension must be .jpg , .bmp or .png");
