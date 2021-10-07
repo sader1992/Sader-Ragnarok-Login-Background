@@ -13,11 +13,12 @@ namespace Sader_Ragnarok_Login_Background
             if (Path.GetExtension(file) != ".jpg" && Path.GetExtension(file) != ".bmp" && Path.GetExtension(file) != ".png")
             {
                 Console.WriteLine("the image extension must be .jpg , .bmp or .png");
+                Console.ReadLine();
+                Environment.Exit(0);
             }
             string path = Path.GetDirectoryName(file);
 
             Image img = Image.FromFile(file);
-            Console.WriteLine(path);
             Console.WriteLine("What is the number of the login image ? (normally it's Nothing or 2)");
             Console.WriteLine("For the default login background just press Enter.");
             string n = Console.ReadLine();
