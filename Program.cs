@@ -11,8 +11,8 @@ namespace Sader_Ragnarok_Login_Background
             //Check if the user has provided an image file as an argument
             if (args.Length == 0 || !File.Exists(args[0]))
             {
-                Console.WriteLine("Please drag and drop the image you want on the application!");
-                Console.WriteLine("When you drag and drop the image onto the application the folder will be created in the same path.");
+                Console.WriteLine("Please drag and drop the image you want onto the application!");
+                Console.WriteLine("When you drag and drop the image onto the application, a folder will be created in the same path.");
                 Console.WriteLine("also you will get this error if the file doesn't exist.");
                 Console.WriteLine("Press any key to exit...");
                 Console.ReadLine();
