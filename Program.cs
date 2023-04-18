@@ -24,15 +24,15 @@ namespace Sader_Ragnarok_Login_Background
             //Check if the file extension is valid
             if (Path.GetExtension(file) != ".jpg" && Path.GetExtension(file) != ".bmp" && Path.GetExtension(file) != ".png")
             {
-                Console.WriteLine("the image extension must be .jpg , .bmp or .png");
+                Console.WriteLine("The image extension must be .jpg, .bmp, or .png.");
                 Console.WriteLine("Press any key to exit...");
                 Console.ReadLine();
                 return;
             }
 
             Image img = Image.FromFile(file);
-            Console.WriteLine("What is the number of the login image ? (normally it's Nothing or 2)");
-            Console.WriteLine("For the default login background just press Enter.");
+            Console.WriteLine("What is the number of the login image? (Usually it's Nothing or 2)");
+            Console.WriteLine("For the default login background, just press Enter.");
             string n = Console.ReadLine();
             Bitmap src = new Bitmap(img, new Size(256 * 4, 256 * 3));
 
@@ -99,7 +99,7 @@ namespace Sader_Ragnarok_Login_Background
                 target.Save($@"data\texture\유저인터페이스\{name[i]}.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
             }
 
-            Console.WriteLine("Done, next to the image you will find a data folder , add it to your '.grf'.");
+            Console.WriteLine("Done. Next to the image, you will find a 'data' folder. Add it to your '.grf'.");
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
         }
