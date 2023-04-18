@@ -8,11 +8,35 @@ namespace Sader_Ragnarok_Login_Background
     {
         static void Main(string[] args)
         {
-            string file = args[0];
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Please drag and drop the image you want on the application!");
+                Console.WriteLine("When you drag and drop the image onto the application the folder will be created in the same path.");
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
+
+            string file = "";
+
+            try
+            {
+                file = args[0];
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong!!");
+                Console.WriteLine("please make sure there is no odd character in the file path or file name!");
+                Console.WriteLine("File: " + file);
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
 
             if (Path.GetExtension(file) != ".jpg" && Path.GetExtension(file) != ".bmp" && Path.GetExtension(file) != ".png")
             {
                 Console.WriteLine("the image extension must be .jpg , .bmp or .png");
+                Console.WriteLine("Press any key to exit...");
                 Console.ReadLine();
                 Environment.Exit(0);
             }
@@ -82,6 +106,7 @@ namespace Sader_Ragnarok_Login_Background
                 target.Save(@"data\texture\유저인터페이스\" + name[i] + ".bmp",System.Drawing.Imaging.ImageFormat.Bmp);
             }
             Console.WriteLine("Done, next to the image you will find a data folder , add it to your Grf.");
+            Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
         }
     }
